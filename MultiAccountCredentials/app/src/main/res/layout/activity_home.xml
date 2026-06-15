@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroun"
+    tools:context=".HomeActivity">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upper_background"
+        android:padding="16dp"
+        android:elevation="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.0">
+
+        <!-- Profile Icon -->
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_profile"
+            android:tint="#FFFFFF" />
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="MultiCredentials"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Icon -->
+        <ImageView
+
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Settings"
+            android:src="@drawable/logout_icon"
+            android:tint="#FFFFFF" />
+        <!--            android:id="@+id/search_edit_text"-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/app_title"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginVertical="5dp"
+
+
+            android:layout_marginTop="-22dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/semi_white_bg"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="8dp"
+            android:hint="Search Application or Username"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.0"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:elevation="10dp"
+        android:background="@drawable/card_background"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+           android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:id="@+id/profile_icon_home"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Menu Icon"
+                android:src="@drawable/profile_icon"
+                android:tint="@color/black" />
+
+
+
+            <!-- Application Name -->
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/app_name_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+
+                android:text="Multi Credentials."
+                android:textColor="#09090B"
+                android:textSize="18sp" />
+
+            <!-- Notification Icon -->
+            <TextView
+                android:id="@+id/logout_icon"
+                android:drawableStart="@drawable/logout_icon"
+                android:drawablePadding="10dp"
+                android:drawableTint="#F44336"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center"
+
+                android:textColor="#F44336"
+                android:textSize="16sp"
+
+                android:fontFamily="@font/poppins"
+                />
+
+        </LinearLayout>
+        <EditText
+
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/app_title"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/poppins"
+
+
+
+            android:layout_weight="1"
+            android:background="@drawable/semi_white_bg"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="8dp"
+            android:hint="Search Application or Username"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textSize="14sp" />
+        <!-- Menu Icon -->
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loading_card_main1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins"
+
+
+                android:text="Note : Your credentials are stored locally. Logging out will erase all data permanently. Save important info before logging out."
+                android:textColor="#E91E63"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loading_card_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/loading_card_main1"
+        tools:layout_editor_absoluteX="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/loading_gif"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/show_gif" />
+
+            <TextView
+                android:id="@+id/analyzingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Get stated by clicking add Button"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/credentials_list"
+        app:layout_constraintTop_toBottomOf="@+id/loading_card_main"
+        tools:layout_editor_absoluteX="30dp" />
+    <!-- List of Stored Credentials -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <pl.droidsonroids.gif.GifImageView
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/no_data_gif" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="No Credentiais found,Create by click add button"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/credentials_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:visibility="visible"
+
+
+            tools:listitem="@layout/item_credential" />
+    </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        app:cardCornerRadius="40dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_add_credentials"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        <LinearLayout
+            android:padding="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:src="@drawable/add_credentials"/>
+            <TextView
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Credentials"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Floating Action Button for Adding Credentials -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_credentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add Credential"
+        app:tint="@color/white"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

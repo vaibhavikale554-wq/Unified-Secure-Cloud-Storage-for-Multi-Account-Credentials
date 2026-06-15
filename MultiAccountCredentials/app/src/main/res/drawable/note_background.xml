@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <solid android:color="#FFF8E1"/> &lt;!&ndash; Light yellow background for note &ndash;&gt;-->
+    <corners android:radius="12dp"/>
+    <padding android:left="10dp" android:right="10dp"/>
+    <stroke android:width="2dp" android:color="#D32F2F"/> <!-- Red border -->
+</shape>

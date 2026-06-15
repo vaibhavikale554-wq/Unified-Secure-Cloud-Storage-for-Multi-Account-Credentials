@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/backgroun">
+
+    <ImageView
+
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/main_logo"
+        android:layout_marginBottom="10dp"
+
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="MultiCredentials"
+        android:textAlignment="center"
+        android:textColor="#4f3625"
+        android:padding="10dp"
+        android:background="@drawable/rounded_gradient_border"
+        android:textSize="18sp"
+
+        android:textStyle="bold"/>
+
+<!--    <ImageView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/bottom_image"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/logo"-->
+<!--        android:layout_gravity="center"-->
+<!--        />-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins"
+        android:padding="16dp"/>
+
+
+</LinearLayout>

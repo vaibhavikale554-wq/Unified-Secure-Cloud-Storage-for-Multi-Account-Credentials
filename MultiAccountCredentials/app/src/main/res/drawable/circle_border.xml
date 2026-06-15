@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow Layer (Outside the Circle) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />  <!-- Transparent inside -->
+            <corners android:radius="100dp" />  <!-- Round corners for the shadow -->
+            <size android:width="220dp" android:height="220dp" /> <!-- Slightly larger than the circle -->
+            <elevation android:value="8dp" /> <!-- Add a shadow effect outside -->
+        </shape>
+    </item>
+
+    <!-- Circle Frame (Inner Circle with No Shadow Inside) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />  <!-- Transparent inside -->
+            <stroke android:color="@android:color/white" android:width="5dp"/> <!-- White Border -->
+            <corners android:radius="100dp"/>  <!-- Round corners for the border -->
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout_registion"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FaceRegistrationScreen"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView_registion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"/> <!-- Set transparent background to see the shape -->
+
+
+
+    <!-- Upper Layout with Transparent Circle -->
+    <com.rao.multiaccountcredentials.comman.CircularCutoutViewRegistration
+        android:layout_width="match_parent"
+        android:id="@+id/cutout_view_registration"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please click 10 frames to complete your face registration."
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:indeterminate="true"
+            android:layout_marginBottom="10dp"
+            android:indeterminateTint="#03A9F4"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+        <!-- GIF ImageView at center bottom -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/click_button_regface"
+            android:layout_marginBottom="130dp"
+            android:text="Click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Reset_button"
+            android:layout_marginBottom="10dp"
+            android:text="Reset"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_button"
+            android:visibility="gone"
+            android:layout_marginBottom="130dp"
+            android:text="Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            />
+    </LinearLayout>
+
+</FrameLayout>
+

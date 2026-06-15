@@ -1,0 +1,23 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background with rounded corners and white color -->
+    <item
+        android:right="1dp"
+        android:left="1dp"
+        android:top="1dp"
+        android:bottom="1dp">
+        <shape>
+            <solid android:color="#FFFFFF"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Light green border -->
+    <item>
+        <shape>
+            <stroke
+                android:width="1dp"
+                android:color="#90EE90" /> <!-- Light Green Color -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+</layer-list>
